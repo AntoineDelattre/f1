@@ -5,12 +5,13 @@ $db = Database::getInstance();
 
 // Définir ma requête
 $sql = <<<EOD
-			Select place
-			From resultat
+			update pilote
+			    set point = (select sum(point) from resultat where numeropilote = pilote.numero)
+			    where numero in (select numeropilote from resultat);
 EOD;
 $curseur = $db->query($sql);
 $lesLignes = $curseur->fetchAll(PDO::FETCH_ASSOC);
 $curseur->closeCursor();
-$lesDonnees['lesPoints'] = $lesLignes;
 
-echo json_encode($lesDonnees);
+// Envoyer le résultat au format Json
+echo json_encode($lesLignes);

@@ -67,7 +67,7 @@ function afficher(data) {
         pied.classList.add('card-footer', 'text-left');
         pied.style.backgroundColor = '#000000';
         pied.style.color = '#ffffff';
-        pied.innerText = 'Nombre de titre : ' + element.nbtitre + '\n' + ' Points : ' + element.nbpoint;
+        pied.innerText = 'Nombre de titre : ' + element.nbtitre + '\n' + ' Points : ' + element.point;
         carte.appendChild(pied);
 
         col.appendChild(carte);
