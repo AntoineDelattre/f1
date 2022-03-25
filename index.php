@@ -27,7 +27,7 @@
     <img src="img.png" style="position: absolute; top: 30%; left: 25%; width: 50%">
     <footer>
         <div style="position: fixed; bottom: 0; left: 50%">
-            © 2021 antoine
+            © 2021 Dreammers
         </div>
     </footer>
 </div>

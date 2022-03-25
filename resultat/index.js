@@ -36,8 +36,8 @@ function afficherResultats(resultats) {
     let tr = document.createElement('tr');
 
     let td = document.createElement('td');
-    td.classList.add('text-center');
-    td.innerText = resultats.nomGP;
+    td.classList.add('text-center', 'masquer');
+    td.innerText = resultats.place;
     tr.appendChild(td);
 
     td = document.createElement('td');
@@ -50,13 +50,9 @@ function afficherResultats(resultats) {
     td.innerText = resultats.nomEcurie;
     tr.appendChild(td);
 
-    td = document.createElement('td');
-    td.classList.add('text-center', 'masquer');
-    td.innerText = resultats.place;
-    tr.appendChild(td);
 
     td = document.createElement('td');
-    td.classList.add('text-center', 'masquer');
+    td.classList.add('text-center');
     td.innerText = resultats.point;
     tr.appendChild(td);
 

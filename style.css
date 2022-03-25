@@ -49,11 +49,16 @@ div.content {
     }
 }
 
+@media screen and (max-width: 1000px) {
+    .masquer {
+        display: none;
+    }
+}
 
 /* On screens that are less than 700px wide, make the sidebar into a topbar */
 @media screen and (max-width: 800px) {
     .sidebar {
-        width: 100px;
+        width: 100%;
         height: auto;
         position: relative;
     }

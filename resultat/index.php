@@ -42,11 +42,10 @@
         <table class='table table-sm table-borderless'>
             <thead>
             <tr>
-                <th class="text-center">Grand Prix</th>
+                <th class="text-center masquer">Place</th>
                 <th class="text-center">Pilotes</th>
                 <th class="text-center">Ecurie</th>
-                <th class="text-center masquer">Place</th>
-                <th class="text-center masquer">Point</th>
+                <th class="text-center">Point</th>
             </tr>
             </thead>
             <tbody id="lesLignes"></tbody>
