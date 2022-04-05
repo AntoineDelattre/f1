@@ -1,6 +1,6 @@
 "use strict";
 
-let lesResultats; //nomGP, nomPilote, nomEcurie, place, point
+let lesresultats; //nomGP, nomPilote, nomEcurie, place, point
 
 window.onload = init;
 
@@ -13,21 +13,21 @@ function init() {
         error: response => console.error(response.responseText),
         success: remplirLesDonnees
     });
-    idGrandprix.onchange = afficher;
+    idgrandprix.onchange = afficher;
 }
 
 function remplirLesDonnees(data) {
-    lesResultats = data.lesResultats;
-    for (const element of data.lesGrandprix) {
-        idGrandprix.appendChild(new Option(element.nom, element.id));
+    lesresultats = data.lesresultats;
+    for (const element of data.lesgrandprix) {
+        idgrandprix.appendChild(new Option(element.nom, element.id));
     }
     afficher();
 }
 
 function afficher() {
     lesLignes.innerHTML = "";
-    for (const resultats of lesResultats) {
-        if (idGrandprix.value === resultats.idGrandprix)
+    for (const resultats of lesresultats) {
+        if (idgrandprix.value === resultats.idgrandprix)
             afficherResultats(resultats);
     }
 }
@@ -42,12 +42,12 @@ function afficherResultats(resultats) {
 
     td = document.createElement('td');
     td.classList.add('text-center');
-    td.innerText = resultats.nomPilote;
+    td.innerText = resultats.nompilote;
     tr.appendChild(td);
 
     td = document.createElement('td');
     td.classList.add('text-center');
-    td.innerText = resultats.nomEcurie;
+    td.innerText = resultats.nomecurie;
     tr.appendChild(td);
 
 

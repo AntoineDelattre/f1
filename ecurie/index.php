@@ -33,7 +33,6 @@
         <thead>
         <tr>
             <th class="masquer"></th>
-            <th class="text-center">Numéro</th>
             <th class="text-center">Nom</th>
             <th class="text-center masquer">Nombre de titre</th>
             <th class="text-center">Point</th>

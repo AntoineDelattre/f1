@@ -23,17 +23,17 @@
     <div class="sidebar">
         <a href="../index.php">Accueil</a>
         <a href="../pilotes/index.php">Pilotes</a>
-        <a href="index.php">Ecuries</a>
+        <a href="../ecurie/index.php">Ecuries</a>
         <a href="../grandprix/index.php">Grand Prix</a>
-        <a href="../resultat/index.php">Résultats</a>
+        <a href="index.php">Résultats</a>
     </div>
 </header>
 <div class='container'>
     <div class="row">
         <div class="col-auto">
             <div class="input-group p-2 mb-3 col-6">
-                <label class="input-group-text" for="idGandprix">Grand Prix</label>
-                <select class="form-select " id="idGrandprix"></select>
+                <label class="input-group-text" for="idgrandprix">Grand Prix</label>
+                <select class="form-select " id="idgrandprix"></select>
             </div>
         </div>
     </div>

@@ -3,9 +3,9 @@ require '../../class/class.database.php';
 $db = Database::getInstance();
 
 $sql = <<<EOD
-    Select grandprix.nom as nomGP, pilote.nom as nomPilote, ecurie.nom as nomEcurie, place, resultat.point, idGrandprix
+    Select pilote.nom as nompilote, ecurie.nom as nomecurie, place, resultat.point, idgrandprix
 	From resultat
-        join grandprix on resultat.idGrandprix = grandprix.id
+        join grandprix on resultat.idgrandprix = grandprix.id
         join pilote on resultat.numeroPilote = pilote.numero
         join ecurie on pilote.idEcurie = ecurie.id
     Order by place;
@@ -13,7 +13,7 @@ EOD;
 $curseur = $db->query($sql);
 $lesLignes = $curseur->fetchAll(PDO::FETCH_ASSOC);
 $curseur->closeCursor();
-$lesDonnees['lesResultats'] = $lesLignes;
+$lesDonnees['lesresultats'] = $lesLignes;
 
 $sql = <<<EOD
     SELECT id, nom 
@@ -23,6 +23,6 @@ EOD;
 $curseur = $db->query($sql);
 $lesLignes = $curseur->fetchAll(PDO::FETCH_ASSOC);
 $curseur->closeCursor();
-$lesDonnees['lesGrandprix'] = $lesLignes;
+$lesDonnees['lesgrandprix'] = $lesLignes;
 
 echo json_encode($lesDonnees);

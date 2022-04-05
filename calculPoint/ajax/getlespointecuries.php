@@ -6,7 +6,8 @@ $db = Database::getInstance();
 // Définir ma requête
 $sql = <<<EOD
 			update ecurie
-			    set point = (select sum(point) from resultat where id = id)
+			    set point = (select sum(point) from resultat where idEcurie = ecurie.id)
+            where id in (select idEcurie from resultat);
 EOD;
 $curseur = $db->query($sql);
 $lesLignes = $curseur->fetchAll(PDO::FETCH_ASSOC);

@@ -7,7 +7,7 @@ $db = Database::getInstance();
 $sql = <<<EOD
 			update pilote
 			    set point = (select sum(point) from resultat where numeropilote = pilote.numero)
-			    where numero in (select numeropilote from resultat);
+			where numero in (select numeropilote from resultat);
 EOD;
 $curseur = $db->query($sql);
 $lesLignes = $curseur->fetchAll(PDO::FETCH_ASSOC);

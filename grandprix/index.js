@@ -28,9 +28,10 @@ function afficher(data) {
         entete.classList.add('card-header', 'text-center');
         entete.style.color = "white";
         entete.style.backgroundColor = "black";
+        entete.style.borderColor = 'white';
         entete.innerText = grandprix.id + " - " + grandprix.nom + " - ";
         carte.appendChild(entete);
-        let img =  document.createElement('img');
+        let img = document.createElement('img');
         img.src = '../pays/' + grandprix.drap;
         img.style.width = "32px";
         img.style.height = "22px";
@@ -39,18 +40,19 @@ function afficher(data) {
 
         let entete2 = document.createElement('div');
         entete2.classList.add('card-header', 'text-center');
-        entete2.style.color = "black";
-        entete2.style.backgroundColor = "";
+        entete2.style.color = "white";
+        entete2.style.backgroundColor = "black";
         entete2.innerText = grandprix.date;
         carte.appendChild(entete2);
 
         let corps = document.createElement('div');
         corps.classList.add("card-body", "text-center");
-        img =  document.createElement('img');
+        img = document.createElement('img');
         img.src = 'circuit.image/' + grandprix.logo;
         img.style.width = "150px";
         img.style.height = "150px";
         img.alt = "";
+        img.style.backgroundColor = "white"
         corps.appendChild(img);
         carte.appendChild(corps);
 

@@ -5,7 +5,7 @@ $db = Database::getInstance();
 
 // Définir ma requête
 $sql = <<<EOD
-			Select *
+			Select id, date, nom, circuit, codepays
 			from grandprix
 			Group by id, grandprix.nom
 EOD;
@@ -25,7 +25,7 @@ for($i = 0; $i < $nb; $i++) {
 $rep = '../../pays/';
 $nb = count($lesLignes);
 for($i = 0; $i < $nb; $i++) {
-    $image = $lesLignes [$i]['codePays'] .".png";
+    $image = $lesLignes [$i]['codepays'] . ".png";
     $lesLignes [$i]['drap'] = file_exists("$rep$image") ? $image : "defaut.jpg";
 }
 

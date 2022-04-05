@@ -5,8 +5,9 @@ $db = Database::getInstance();
 
 // Définir ma requête
 $sql = <<<EOD
-			Select *
+			Select id, nom, nbtitre, point, codePays
 			From ecurie
+            order by point DESC;
 EOD;
 $curseur = $db->query($sql);
 $lesLignes = $curseur->fetchAll(PDO::FETCH_ASSOC);
