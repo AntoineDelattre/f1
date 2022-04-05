@@ -26,7 +26,7 @@
 <div class="container p-5" id='lesCartes'></div>
 <footer>
     <div style="position: relative; bottom: 0; left: 50%; width: 10%">
-        © 2021 Dreamers
+        © 2022 Dreamers
     </div>
 </footer>
 </body>
